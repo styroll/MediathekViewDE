@@ -1,74 +1,14 @@
 <script src="{{ "js/jquery.min.js" | absURL }}"></script>
 <script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
-
-<script type="text/javascript">
-$(function(){
-    $("table").addClass("table table-condensed table-bordered table-striped");
-});
-</script>
+<script src="{{ "js/base.js" | absURL }}"></script>
 
 {{ if .Params.galerie }}
 <!-- Glisse Vollbildgallerie laden -->
 <script src="{{ "js/galerie/" | absURL }}glisse.js"></script>
-<script type="text/javascript">
-$(function () {
-    $('.pics').glisse({
-        changeSpeed: 550, 
-        speed: 500,
-        effect: 'bounce',
-        fullscreen: true,
-        mobile: true,
-        bootstrap: true,
-        bootstrapl18nNext: "Nächstes",
-        bootstrapl18nPrevious: "Vorheriges",
-        bootstrapl18nClose: "Schließen"
-    }); 
-});
-</script>
+<script src="{{ "js/gallerieEinstellungen.js" | absURL }}"></script>
 <!-- Ende Glisse Vollbildgallerie laden -->
 {{ end }}
 
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  // tracker methods like "setCustomDimension" should be called before "trackPageView"
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//analyse.elaon.de/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '4']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
-
-<!-- Zurück zum Anfang Icon ein und ausblenden -->
-<script type="text/javascript">
-function setdefaults()
-{
-  $("#return-to-top").css("opacity",0);
-}
-
-$(document).ready(function(){
-   setdefaults();
-
-  $(window).scroll(function() {
-
-      $scrolled = $(window).scrollTop();
-      $toScrollPercentage = 50;
-      $toScroll = $(window).height()*($toScrollPercentage/100);
-        if($scrolled < $toScroll)
-        {
-          $("#return-to-top").css("opacity",0);
-        } else
-        {
-          $("#return-to-top").css("opacity",0.5);
-        }
-    });
-});
-</script>
-<!-- Ende Zurück zum Anfang Icon ein und ausblenden -->
-
+<!-- Matomo -->
+<noscript><p><img src="https://analyse.elaon.de/piwik.php?idsite=4&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
