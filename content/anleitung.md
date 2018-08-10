@@ -18,9 +18,7 @@ Das Programm MediathekView (abgekürzt: MV) ist eine Art Suchmaschine für Filme
 ## Installation
 
 ### Systemvoraussetzungen
-Unterstützt wird Windows (XP, Vista, 7, 8, 10), Linux sowie Mac OS X (ab Version 10.7.3 (1)). MediathekView benötigt unter Windows und Linux eine aktuelle [Java-VM](http://java.com/de/) ab Version: 1.8 (= Java 8). Für Linux-Benutzer wird [OpenJDK8](http://download.java.net/openjdk/jdk8/) empfohlen, außerdem benötigen Linux Benutzer die aktuelle Version von JavaFX (OpenJFX). Mac-OS-X-Benutzer brauchen kein Java zu installieren, da Java in die Applikation MediathekView (ab Version 4) integriert wurde.
-
-(1) Benutzer von OS X 10.6 benötigen Java 6 (von Apple vorinstalliert) sowie die Version 3.3.0 von MediathekView, und zwar die [ZIP-Datei](https://sourceforge.net/projects/zdfmediathk/files/Mediathek/Mediathek%203.3.0/) ohne die Angabe "OSX" im Dateinamen (mehr dazu unter [Anleitung/Mac](#mac)).
+Unterstützt wird Windows (XP, Vista, 7, 8, 10), Linux sowie Mac OS X (ab Version 10.7.3). MediathekView benötigt unter Windows und Linux eine [Java-VM](http://java.com/de/) in der Version: 1.8 (= Java 8); Java 9 und neuer werden noch nicht unterstützt. Für Linux-Benutzer wird [OpenJDK8](http://download.java.net/openjdk/jdk8/) empfohlen, außerdem benötigen Linux Benutzer die aktuelle Version von JavaFX (OpenJFX). Mac-OS-X-Benutzer brauchen kein Java zu installieren, da Java in die Applikation MediathekView (ab Version 4) integriert wurde.
 
 ### Hilfsprogramme zum Abspielen und Aufzeichnen von Sendungen
 Zum Ansehen und Aufzeichnen werden geeignete Zusatzprogramme benötigt. MediathekView ist konfiguriert für die Verwendung von **VLC Media Player** (zum Abspielen und Aufzeichnen von Sendungen) sowie **flvstreamer** und **FFmpeg** zum Aufzeichnen von Sendungen.
@@ -301,9 +299,9 @@ Für OS X 10.7.3 (und neuer) gibt es eine separate Applikation "MediathekView.ap
 3. (optionaler Schritt: Verknüpfung im Dock ablegen) die Applikation "MediathekView.app" ins Dock ziehen. Von dort aus kann MediathekView dann jeweils gestartet werden.
 4. die heruntergeladene DMG-Datei kann nach dem Entpacken gelöscht werden
 
-Für Mac-OS-X-10.6-Benutzer sowie für fortgeschrittene Benutzer, die MediathekView auf einem portablen Datenträger (z.B. USB-Stick) verwenden oder mit weiteren Funktionen ausstatten und alle zusätzlichen Hilfsprogramme zum Abspielen, Aufzeichnen, Transcodieren etc. im gleichen Verzeichnis haben wollen:
+Für fortgeschrittene Benutzer, die MediathekView auf einem portablen Datenträger (z.B. USB-Stick) verwenden oder mit weiteren Funktionen ausstatten und alle zusätzlichen Hilfsprogramme zum Abspielen, Aufzeichnen, Transcodieren etc. im gleichen Verzeichnis haben wollen:
 
-1. die ZIP-Datei (ohne die Angabe "OSX" im Dateinamen, für Mac-OS-X-10.6-Benutzer zwingend "MediathekView_3.3.0.zip") [herunterladen](https://sourceforge.net/projects/zdfmediathk/files/Mediathek/) und doppelklicken
+1. die ZIP-Datei (ohne die Angabe "OSX" im Dateinamen, z.B. "MediathekView-13.1.2.zip") [herunterladen](https://download.mediathekview.de/stabil/) und doppelklicken
 2. den entpackten Ordner per Drag-and-drop ins Programme-Verzeichnis (empfohlen) oder bei fehlenden Rechten ins Home-Verzeichnis (Haus-Symbol) verschieben
 3. (optionaler Schritt: Verknüpfung im Dock ablegen) den eben verschobenen MediathekView-Ordner öffnen, die Datei "MediathekView.command" ansteuern und ins Dock ziehen. Von dort aus kann MediathekView dann jeweils gestartet werden.
 4. die ZIP-Datei kann nach dem Entpacken gelöscht werden
@@ -319,7 +317,7 @@ MediathekView wird nicht installiert; das Entpacken der [heruntergeladenen ZIP-D
 4. die ZIP-Datei kann nach dem Entpacken gelöscht werden
 
 ### Update
-**Windows**: Das Update von MediathekView geschieht dadurch, dass man die heruntergeladene ZIP-Datei der neuen Version in das selbe Verzeichnis entpackt, in dem sich die alte Version befindet. Anschließend kann man von der Startdatei im neuen Programmordner (z.B. "MediathekView_9") eine Desktopverknüpfung erstellen (vgl. Abschnitt oben). Bevor man den alten Programmordner (z.B. "MediathekView_3.3.0") löscht, sollte man allfällige selbst installierte Hilfsprogramme und Skripte transferieren. Die Einstellungen der vorhergehenden Programmversion werden von der neuen Version verwendet; es gibt also keinen neuen Einrichtungsdialog.
+**Windows**: Das Update von MediathekView geschieht dadurch, dass man die heruntergeladene ZIP-Datei der neuen Version in das selbe Verzeichnis entpackt, in dem sich die alte Version befindet. Anschließend kann man von der Startdatei im neuen Programmordner (z.B. "MediathekView-13.1.2") eine Desktopverknüpfung erstellen (vgl. Abschnitt oben). Bevor man den alten Programmordner (z.B. "MediathekView_9") löscht, sollte man allfällige selbst installierte Hilfsprogramme und Skripte transferieren. Die Einstellungen der vorhergehenden Programmversion werden von der neuen Version verwendet; es gibt also keinen neuen Einrichtungsdialog.
 
 **Mac**: Das Update erfolgt dadurch, dass man die neue Version von MediathekView in den Programmordner zieht, wodurch die alte ersetzt wird.
 
@@ -331,18 +329,18 @@ rm -R ~/.mediathek3
 ```
 
 ## Starten
-Für Windows (MediathekView.exe), Linux (MediathekView.sh) sind eigene Startdateien enthalten, mit welchen MediathekView direkt gestartet werden kann. Für OS X 10.7.3 und neuer besteht eine eigenständige Applikation (MediathekView.app); für OS X 10.6 liegt die Startdatei "MediathekView.command" vor.
+Für Windows (MediathekView.exe), Linux (MediathekView.sh) sind eigene Startdateien enthalten, mit welchen MediathekView direkt gestartet werden kann. Für OS X 10.7.3 und neuer besteht eine eigenständige Applikation (MediathekView.app).
 
 Ansonsten kann man die Programmdatei auch so starten:
 
 - Windows: Doppelklick auf "MediathekView-ipv4.exe" oder "MediathekView.jar"
 - Linux (in der Konsole): `java -jar MediathekView.jar`
-- OS X: Doppelklick auf die separate Startdatei "MediathekView.command" oder via Terminalbefehl: `java -jar MediathekView.jar` (beide Varianten stehen nur zur Verfügung, wenn man die ZIP-Datei ohne die Angabe "OSX" im Dateinamen heruntergeladen hat)
+- OS X: Doppelklick auf die separate Startdatei "MediathekView.command" oder via Terminalbefehl: `java -jar MediathekView.jar` (beide Varianten stehen nur zur Verfügung, wenn man die ZIP-Datei ohne die Angabe "OSX" im Dateinamen heruntergeladen hat, und machen Sinn, wenn man eine eigene Java-VM verwenden will).
 
 Startet das Programm nicht, gibt es Hilfe in der [FAQ](/FAQ).
 
 ### Starten im portablen Modus (MediathekView Portable)
-Für den portablen Einsatz z.B. auf einem USB-Stick stehen im Ordner "Portable" entsprechende Startdateien zur Verfügung (z.B. "MediathekView__Portable.exe" für Windows). Diese Startdateien dürfen nicht aus dem Ordner "Portable" verschoben werden. Beim portablen Start wird der Ordner "Einstellungen" im MediathekView-Programmordner angelegt. Da hinein können, falls gewünscht, die bisherigen Einstellungen, also der Ordner ".mediathek3" aus dem Benutzerverzeichnis kopiert werden.
+Aktuell funktioniert das nur mit MediathekView 13.0.6 und älter. Für den portablen Einsatz z.B. auf einem USB-Stick stehen im Ordner "Portable" entsprechende Startdateien zur Verfügung (z.B. "MediathekView__Portable.exe" für Windows). Diese Startdateien dürfen nicht aus dem Ordner "Portable" verschoben werden. Beim portablen Start wird der Ordner "Einstellungen" im MediathekView-Programmordner angelegt. Da hinein können, falls gewünscht, die bisherigen Einstellungen, also der Ordner ".mediathek3" aus dem Benutzerverzeichnis kopiert werden.
 
 Unter OS X ist ein portabler Start nur möglich, wenn man die ZIP-Datei ohne die Angabe "OSX" im Dateinamen [heruntergeladen](/download) hat. Detailliertere Information zum portablen Modus von MediathekView kann man der Datei "Portable.txt" im Ordner "Portable" des MediathekView-Programmordners entnehmen. Interessierte können den Code für die Startdateien für OS X und Linux direkt den Startdateien selbst entnehmen. Die portable Startdatei für Windows enthält im Kern folgende Zeilen Code:
 ```
